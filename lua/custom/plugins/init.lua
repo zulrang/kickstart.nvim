@@ -16,4 +16,16 @@ vim.keymap.set('n', '<leader>st', function()
   vim.api.nvim_win_set_height(0, 15)
 end)
 
+vim.keymap.set('n', '<a-k>', function()
+  vim.cmd.cprevious { count = vim.v.count1 }
+end, {
+  desc = ':cprevious',
+})
+
+vim.keymap.set('n', '<a-j>', function()
+  vim.cmd.cnext { count = vim.v.count1 }
+end, {
+  desc = ':cnext',
+})
+
 return {}
